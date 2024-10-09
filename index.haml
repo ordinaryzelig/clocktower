@@ -3,12 +3,55 @@
   %head
     %title Jared's 2024 Birthday Party
     %meta{:name => "viewport", :content => "width=device-width,initial-scale=1"}
-    -#= stylesheet_link_tag "application", "data-turbo-track": "reload"
+    :plain
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     :sass
-      body
-        background-image: "botc-hero-banner-26I3AP6K.webp.jpeg"
-      h3
-        color: red
+      @use "sass:color"
+      a
+        color: color.adjust(brown, $lightness: -25%)
+        text-decoration: none
+        &:hover
+          text-decoration: underline
+      #title
+        height: 900px
+        background-image: url("public/images/botc-hero-banner-26I3AP6K.webp.jpeg")
+        background-position: center
+        background-repeat: no-repeat
+        @media (max-width: 575.98px)
+          background-size: 800px
+          height: 400px
+      #details
+        font-family: fantasy
+        background-image: url("public/images/bg-light-rough-tile-TJBBJ7QQ.jpg")
+        color: brown
+        padding: 50px 200px
+        @media (max-width: 991.98px)
+          padding: 20px 50px
 
   %body
-    %h3 hi
+    %section#title
+
+    %section#details
+      %h1.text-center.mb-4.mb-xl-5.pt-3
+        This year for my birthday,
+        %br
+        you will probably die.
+
+      %p.fs-3
+        %strong Saturday November 2
+        is Dia de los Muertos and we will play&nbsp;
+        %a{:href => 'https://bloodontheclocktower.com', :target => :_blank}> Blood on the Clocktower
+        , a social deduction game where you are secretly either good, or evil, or drunk, or poisoned, or all of the above.
+        No matter your alignment or mental state, the odds are not in your favor to survive the night.
+        A demon in human form, with the help of secret minions, lives among the good people in town and can kill anybody in their sleep while the good people in town can vote to execute anyone just for their “suss vibes”.
+        Team Good wins by democratically executing the demon.
+        Team Evil wins if the demon survives to the end.
+      %p.fs-3
+        As host, I will run the game as the storyteller, so I will not be playing.
+      %hr
+
+      %p.fs-4.text-center
+        Exact time and venue are TBD.
+      %p.fs-4.text-center
+        Please save the date and let me know if you can come.
