@@ -8,6 +8,10 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     :sass
       @use "sass:color"
+      body
+        font-family: fantasy
+        background-image: url("public/images/bg-light-rough-tile-TJBBJ7QQ.jpg")
+        color: brown
       a
         color: color.adjust(brown, $lightness: -25%)
         text-decoration: none
@@ -21,10 +25,7 @@
         @media (max-width: 767.98px)
           background-size: 800px
           height: 400px
-      #details
-        font-family: fantasy
-        background-image: url("public/images/bg-light-rough-tile-TJBBJ7QQ.jpg")
-        color: brown
+      #main
         padding: 50px 200px
         @media (max-width: 991.98px)
           padding: 20px 30px
@@ -32,28 +33,52 @@
   %body
     %section#title
 
-    %section#details
-      %h1.text-center.mb-4.mb-xl-5.pt-3
-        This year for my birthday,
-        %br
-        you will probably die.
+    #main
+      %section#intro
+        %h1.text-center.mb-4.mb-xl-5.pt-3
+          This year for my birthday,
+          %br
+          you will probably die.
 
-      %p.fs-4
-        %strong On Saturday October 26,
-        we will play&nbsp;
-        %a{:href => 'https://bloodontheclocktower.com', :target => :_blank}> Blood on the Clocktower
-        , a social deduction game where you are secretly either good, or evil, or drunk, or poisoned, or all of the above.
-        No matter your alignment or mental state, the odds are not in your favor to survive the night.
-        A demon in human form lives among the townsfolk.
-        With the help of secret minions, the demon can kill anybody in their sleep, and
-        the townsfolk can vote to execute anyone just for their “suss vibes”.
-        Team Good wins by democratically executing the demon.
-        Team Evil wins if the demon survives to the end.
-      %p.fs-4
-        As host, I will run the game as the storyteller.
+      %section#details.text-center
+
+        %h2 When
+        %p.fs-5
+          Saturday October 26 @ 6pm.
+          %br
+          The game will start at 7pm
+          %br
+          (if you want to play).
+
+        %h2 Where
+        %p.fs-5
+          Starrs' house.
+          %br
+          %a{:href => 'https://maps.app.goo.gl/c3EiQLv5qqVezCyV7', :target => :_blank}
+            13921 Osage Dr
+            %br
+            Edmond, 73013
+
+        %h2 Who
+        %p.fs-5
+          Adults only.
+
+        %h2 Please R.S.V.P.
+        %p.fs-5
+          Dinner provided.
+
       %hr
 
-      %p.fs-5.text-center
-        Exact time and venue are TBD.
-      %p.fs-5.text-center
-        Please save the date and let me know if you can come.
+      %section#game
+        %p.fs-4
+          We will play&nbsp;
+          %a{:href => 'https://bloodontheclocktower.com', :target => :_blank}> Blood on the Clocktower
+          , a social deduction game where you are secretly either good, or evil, or drunk, or poisoned, or all of the above.
+          No matter your alignment or mental state, the odds are not in your favor to survive the night.
+          A demon in human form lives among the townsfolk.
+          With the help of secret minions, the demon can kill anybody in their sleep, and
+          the townsfolk can vote to execute anyone just for their “suss vibes”.
+          Team Good wins by democratically executing the demon.
+          Team Evil wins if the demon survives to the end.
+        %p.fs-4
+          As host, I will run the game as the storyteller.
